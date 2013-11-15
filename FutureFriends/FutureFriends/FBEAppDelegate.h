@@ -30,4 +30,6 @@
 
 @property (strong, nonatomic) FBEViewController *viewController;
 
+@property (strong, nonatomic) UIWebView *webView;
+
 @end

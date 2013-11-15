@@ -7,6 +7,7 @@
 //
 
 #import "UIWebViewController.h"
+#import "FBEAppDelegate.h"
 
 @interface UIWebViewController ()
 
@@ -19,15 +20,38 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        webView = ((FBEAppDelegate *)[UIApplication sharedApplication].delegate).webView;
+        webView.translatesAutoresizingMaskIntoConstraints = NO;
+
+        self.edgesForExtendedLayout = UIRectEdgeNone;
     }
     return self;
 }
+
+- (void)setUrl:(NSString *)url {
+    _url = [url mutableCopy];
+//    NSURL *nsUrl = [[NSURL alloc] initWithString:url];
+//    [webView loadRequest:[[NSURLRequest alloc] initWithURL:nsUrl]];
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.view addSubview:webView];
+    NSDictionary *views = @{@"webView":webView};
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[webView]|"
+                                                                      options:NSLayoutFormatAlignAllBaseline
+                                                                      metrics:nil views:views]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:webView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual
+                                                              toItem:navBar attribute:NSLayoutAttributeBottom multiplier:1 constant:0]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:webView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual
+                                                              toItem:toolbar attribute:NSLayoutAttributeTop multiplier:1 constant:0]];
+    
 
+    NSURL *nsUrl = [[NSURL alloc] initWithString:self.url];
+    [webView loadRequest:[[NSURLRequest alloc] initWithURL:nsUrl]];
 
 
 }
@@ -64,11 +88,11 @@
     
     if (buttonIndex == 0) {
 // delete
-        
-        
-        
+
+
     }
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
     
 }
 

@@ -11,9 +11,13 @@
 @interface UIWebViewController : UIViewController <UIActionSheetDelegate, UIAlertViewDelegate>  {
     
     IBOutlet UINavigationBar *navBar;
+    __weak IBOutlet UIToolbar *toolbar;
+    __weak UIWebView *webView;
     
     
 }
+
+@property(nonatomic, copy) NSString *url;
 
 - (IBAction)Done:(id)sender;
 - (IBAction)cancel:(id)sender;

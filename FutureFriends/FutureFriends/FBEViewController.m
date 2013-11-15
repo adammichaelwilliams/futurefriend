@@ -121,6 +121,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UIWebViewController *web = [[UIWebViewController alloc] initWithNibName:@"UIWebViewController" bundle:nil];
+    web.url = @"https://www.facebook.com/agarkavyi";
     [self presentViewController:web animated:YES completion:nil];
     
 }
@@ -163,6 +164,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)dealloc {
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+}
+
 
 @end
 
