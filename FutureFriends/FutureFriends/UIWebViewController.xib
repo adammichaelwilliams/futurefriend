@@ -42,7 +42,14 @@
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vB9-TE-NDM">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <items/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="aG3-1a-oSq"/>
+                        <barButtonItem title="Next Friend" id="wXQ-2H-FWw">
+                            <connections>
+                                <action selector="nextFriend:" destination="-1" id="wAE-Ay-RcR"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
                 </toolbar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -52,6 +52,14 @@
     
 }
 
+
+- (IBAction)nextFriend:(id)sender {
+    
+    
+    
+}
+
+
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     if (buttonIndex == 0) {

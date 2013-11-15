@@ -17,6 +17,6 @@
 
 - (IBAction)Done:(id)sender;
 - (IBAction)cancel:(id)sender;
-
+- (IBAction)nextFriend:(id)sender;
 
 @end

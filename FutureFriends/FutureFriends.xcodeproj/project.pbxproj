@@ -10,12 +10,13 @@
 		8C24B15C1835B85100D232C0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C24B15A1835B85100D232C0 /* Model.xcdatamodeld */; };
 		8C24B1601835B8E000D232C0 /* UIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C24B15E1835B8E000D232C0 /* UIWebViewController.m */; };
 		8C24B1611835B8E000D232C0 /* UIWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C24B15F1835B8E000D232C0 /* UIWebViewController.xib */; };
+		8C24B1631835C12000D232C0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C24B1621835C12000D232C0 /* CoreData.framework */; };
 		8C3A66281835B584009B261B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A66271835B584009B261B /* UIKit.framework */; };
 		8C3A662A1835B584009B261B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A66291835B584009B261B /* Foundation.framework */; };
 		8C3A662C1835B584009B261B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A662B1835B584009B261B /* CoreGraphics.framework */; };
 		8C3A66321835B584009B261B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A66301835B584009B261B /* InfoPlist.strings */; };
 		8C3A66341835B584009B261B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A66331835B584009B261B /* main.m */; };
-		8C3A66381835B584009B261B /* FBEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A66371835B584009B261B /* FBEAppDelegate.m */; };
+		8C3A66381835B584009B261B /* FBEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A66371835B584009B261B /* FBEAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8C3A663A1835B584009B261B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A66391835B584009B261B /* Default.png */; };
 		8C3A663C1835B584009B261B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A663B1835B584009B261B /* Default@2x.png */; };
 		8C3A663E1835B584009B261B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A663D1835B584009B261B /* Default-568h@2x.png */; };
@@ -28,6 +29,7 @@
 		8C24B15D1835B8E000D232C0 /* UIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewController.h; sourceTree = "<group>"; };
 		8C24B15E1835B8E000D232C0 /* UIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewController.m; sourceTree = "<group>"; };
 		8C24B15F1835B8E000D232C0 /* UIWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIWebViewController.xib; sourceTree = "<group>"; };
+		8C24B1621835C12000D232C0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8C3A66241835B584009B261B /* FutureFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutureFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3A66271835B584009B261B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C3A66291835B584009B261B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C24B1631835C12000D232C0 /* CoreData.framework in Frameworks */,
 				8C3A66281835B584009B261B /* UIKit.framework in Frameworks */,
 				8C3A662A1835B584009B261B /* Foundation.framework in Frameworks */,
 				8C3A662C1835B584009B261B /* CoreGraphics.framework in Frameworks */,
@@ -80,6 +83,7 @@
 		8C3A66261835B584009B261B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C24B1621835C12000D232C0 /* CoreData.framework */,
 				8C3A66271835B584009B261B /* UIKit.framework */,
 				8C3A66291835B584009B261B /* Foundation.framework */,
 				8C3A662B1835B584009B261B /* CoreGraphics.framework */,
