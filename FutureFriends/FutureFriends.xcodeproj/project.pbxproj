@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C3A66281835B584009B261B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A66271835B584009B261B /* UIKit.framework */; };
+		8C3A662A1835B584009B261B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A66291835B584009B261B /* Foundation.framework */; };
+		8C3A662C1835B584009B261B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A662B1835B584009B261B /* CoreGraphics.framework */; };
+		8C3A66321835B584009B261B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A66301835B584009B261B /* InfoPlist.strings */; };
+		8C3A66341835B584009B261B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A66331835B584009B261B /* main.m */; };
+		8C3A66381835B584009B261B /* FBEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A66371835B584009B261B /* FBEAppDelegate.m */; };
+		8C3A663A1835B584009B261B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A66391835B584009B261B /* Default.png */; };
+		8C3A663C1835B584009B261B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A663B1835B584009B261B /* Default@2x.png */; };
+		8C3A663E1835B584009B261B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A663D1835B584009B261B /* Default-568h@2x.png */; };
+		8C3A66411835B584009B261B /* FBEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A66401835B584009B261B /* FBEViewController.m */; };
+		8C3A66441835B584009B261B /* FBEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A66421835B584009B261B /* FBEViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8C3A66241835B584009B261B /* FutureFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutureFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C3A66271835B584009B261B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8C3A66291835B584009B261B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8C3A662B1835B584009B261B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8C3A662F1835B584009B261B /* FutureFriends-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FutureFriends-Info.plist"; sourceTree = "<group>"; };
+		8C3A66311835B584009B261B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C3A66331835B584009B261B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C3A66351835B584009B261B /* FutureFriends-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FutureFriends-Prefix.pch"; sourceTree = "<group>"; };
+		8C3A66361835B584009B261B /* FBEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBEAppDelegate.h; sourceTree = "<group>"; };
+		8C3A66371835B584009B261B /* FBEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBEAppDelegate.m; sourceTree = "<group>"; };
+		8C3A66391835B584009B261B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8C3A663B1835B584009B261B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8C3A663D1835B584009B261B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8C3A663F1835B584009B261B /* FBEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBEViewController.h; sourceTree = "<group>"; };
+		8C3A66401835B584009B261B /* FBEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBEViewController.m; sourceTree = "<group>"; };
+		8C3A66431835B584009B261B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FBEViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C3A66211835B584009B261B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C3A66281835B584009B261B /* UIKit.framework in Frameworks */,
+				8C3A662A1835B584009B261B /* Foundation.framework in Frameworks */,
+				8C3A662C1835B584009B261B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C3A661B1835B584009B261B = {
+			isa = PBXGroup;
+			children = (
+				8C3A662D1835B584009B261B /* FutureFriends */,
+				8C3A66261835B584009B261B /* Frameworks */,
+				8C3A66251835B584009B261B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C3A66251835B584009B261B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C3A66241835B584009B261B /* FutureFriends.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C3A66261835B584009B261B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C3A66271835B584009B261B /* UIKit.framework */,
+				8C3A66291835B584009B261B /* Foundation.framework */,
+				8C3A662B1835B584009B261B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C3A662D1835B584009B261B /* FutureFriends */ = {
+			isa = PBXGroup;
+			children = (
+				8C3A66361835B584009B261B /* FBEAppDelegate.h */,
+				8C3A66371835B584009B261B /* FBEAppDelegate.m */,
+				8C3A663F1835B584009B261B /* FBEViewController.h */,
+				8C3A66401835B584009B261B /* FBEViewController.m */,
+				8C3A66421835B584009B261B /* FBEViewController.xib */,
+				8C3A662E1835B584009B261B /* Supporting Files */,
+			);
+			path = FutureFriends;
+			sourceTree = "<group>";
+		};
+		8C3A662E1835B584009B261B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C3A662F1835B584009B261B /* FutureFriends-Info.plist */,
+				8C3A66301835B584009B261B /* InfoPlist.strings */,
+				8C3A66331835B584009B261B /* main.m */,
+				8C3A66351835B584009B261B /* FutureFriends-Prefix.pch */,
+				8C3A66391835B584009B261B /* Default.png */,
+				8C3A663B1835B584009B261B /* Default@2x.png */,
+				8C3A663D1835B584009B261B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C3A66231835B584009B261B /* FutureFriends */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C3A66471835B584009B261B /* Build configuration list for PBXNativeTarget "FutureFriends" */;
+			buildPhases = (
+				8C3A66201835B584009B261B /* Sources */,
+				8C3A66211835B584009B261B /* Frameworks */,
+				8C3A66221835B584009B261B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FutureFriends;
+			productName = FutureFriends;
+			productReference = 8C3A66241835B584009B261B /* FutureFriends.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C3A661C1835B584009B261B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FBE;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Ricardo Del Toro";
+			};
+			buildConfigurationList = 8C3A661F1835B584009B261B /* Build configuration list for PBXProject "FutureFriends" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8C3A661B1835B584009B261B;
+			productRefGroup = 8C3A66251835B584009B261B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C3A66231835B584009B261B /* FutureFriends */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C3A66221835B584009B261B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C3A66321835B584009B261B /* InfoPlist.strings in Resources */,
+				8C3A663A1835B584009B261B /* Default.png in Resources */,
+				8C3A663C1835B584009B261B /* Default@2x.png in Resources */,
+				8C3A663E1835B584009B261B /* Default-568h@2x.png in Resources */,
+				8C3A66441835B584009B261B /* FBEViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C3A66201835B584009B261B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C3A66341835B584009B261B /* main.m in Sources */,
+				8C3A66381835B584009B261B /* FBEAppDelegate.m in Sources */,
+				8C3A66411835B584009B261B /* FBEViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8C3A66301835B584009B261B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C3A66311835B584009B261B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8C3A66421835B584009B261B /* FBEViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C3A66431835B584009B261B /* en */,
+			);
+			name = FBEViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C3A66451835B584009B261B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8C3A66461835B584009B261B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C3A66481835B584009B261B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FutureFriends/FutureFriends-Prefix.pch";
+				INFOPLIST_FILE = "FutureFriends/FutureFriends-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8C3A66491835B584009B261B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FutureFriends/FutureFriends-Prefix.pch";
+				INFOPLIST_FILE = "FutureFriends/FutureFriends-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C3A661F1835B584009B261B /* Build configuration list for PBXProject "FutureFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C3A66451835B584009B261B /* Debug */,
+				8C3A66461835B584009B261B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C3A66471835B584009B261B /* Build configuration list for PBXNativeTarget "FutureFriends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C3A66481835B584009B261B /* Debug */,
+				8C3A66491835B584009B261B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C3A661C1835B584009B261B /* Project object */;
+}
