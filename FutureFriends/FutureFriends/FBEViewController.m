@@ -14,7 +14,7 @@
 
 @interface FBEViewController ()
 
-@property (strong) NSMutableArray *friends;
+@property (strong) NSArray *friends;
 
 
 @end
@@ -27,14 +27,18 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(UpdateTableViewNotification:) name:@"UpdateTableViewNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(UpdateTableViewNotification:)
+                                                     name:TABLE_NOTIF object:nil];
 
     
 
-        NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserDetails"];
-                
-        self.friends = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+//        NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+//        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserDetails"];
+        NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+        NSArray *array = [def arrayForKey:DEFAULTS_DATA];
+
+        self.friends = array;
     
     }
 
@@ -59,7 +63,9 @@
 
 
 - (void)UpdateTableViewNotification:(NSNotification *)UpdateTableViewNotification {
-    
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    NSArray *array = [def arrayForKey:DEFAULTS_DATA];
+    self.friends = array;
     [self->_tableView reloadData];
 
     
@@ -129,7 +135,7 @@
     
 //    [cell.textLabel setText:[NSString stringWithFormat:@"%@ \r%@", [tasks valueForKey:@"name"]];
     
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@", [friends valueForKey:@"userURL"]]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@", friends[indexPath.item]]];
     
     
 
@@ -145,7 +151,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UIWebViewController *web = [[UIWebViewController alloc] initWithNibName:@"UIWebViewController" bundle:nil];
-    web.url = @"https://www.facebook.com/agarkavyi";
+    web.url = friends[indexPath.item];
     [self presentViewController:web animated:YES completion:nil];
     
 }

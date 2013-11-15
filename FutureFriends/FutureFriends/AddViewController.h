@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
+#define TABLE_NOTIF @"UpdateTableViewNotification"
 
 @interface AddViewController : UIViewController <UITextFieldDelegate>  {
     

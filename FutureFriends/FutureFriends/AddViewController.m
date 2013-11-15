@@ -87,30 +87,40 @@
 
 - (void)saveNewObject {
     
-    NSManagedObjectContext *context = [self managedObjectContext];
+//    NSManagedObjectContext *context = [self managedObjectContext];
+//
+//    if (self.managedObject) {
+//        [self.managedObject setValue:self.textField.text forKey:@"userURL"];
+//
+//    } else {
+//        // create a new managed object
+//        NSManagedObjectContext *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"UserDetails" inManagedObjectContext:context];
+//        [newDevice setValue:self.textField.text forKey:@"userURL"];
+//
+//
+//
+//    }
+//
+//    NSLog(@"managedObject:%@", managedObject);
+//
+//
+//    NSError *error = nil;
+//    if (![context save:&error]) {
+//        NSLog(@"Unresolved error %@, %@", error, [error localizedDescription]);
+//
+//    }
 
-    if (self.managedObject) {
-        [self.managedObject setValue:self.textField.text forKey:@"userURL"];
-        
-    } else {
-        // create a new managed object
-        NSManagedObjectContext *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"UserDetails" inManagedObjectContext:context];
-        [newDevice setValue:self.textField.text forKey:@"userURL"];
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *array = [[def arrayForKey:DEFAULTS_DATA] mutableCopy];
+    if (!array) {
+        array = [[NSMutableArray alloc]init];
+    }
+    [array addObject:self.textField.text];
+    [def setObject:array forKey:DEFAULTS_DATA];
+    [def synchronize];
 
-        
-        
-    }
-    
-    NSLog(@"managedObject:%@", managedObject);
-    
-    
-    NSError *error = nil;
-    if (![context save:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, [error localizedDescription]);
-        
-    }
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateTableViewNotification" object:nil];
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:TABLE_NOTIF object:nil];
     
     
 
