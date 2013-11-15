@@ -57,6 +57,21 @@
     
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)text {
+    
+    if (text == textField) {
+        
+        [self saveNewObject];
+        
+        
+        
+    }
+    
+    return 0;
+
+    
+}
+
 
 
 - (IBAction)done:(id)sender {
@@ -83,13 +98,20 @@
         [newDevice setValue:self.textField.text forKey:@"userURL"];
 
         
+        
     }
+    
+    NSLog(@"managedObject:%@", managedObject);
+    
     
     NSError *error = nil;
     if (![context save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error localizedDescription]);
         
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateTableViewNotification" object:nil];
+    
     
 
     [self dismissViewControllerAnimated:YES completion:nil];

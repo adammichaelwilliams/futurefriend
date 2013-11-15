@@ -26,11 +26,13 @@
                     <items>
                         <navigationItem title="Add Friend" id="BRd-6w-Jjr">
                             <barButtonItem key="leftBarButtonItem" title="Cancel" id="raz-OC-n4V">
+                                <color key="tintColor" red="0.25490197539999998" green="0.36078432199999999" blue="0.61176472900000001" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <action selector="cancel:" destination="-1" id="zZM-Gq-QVT"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" title="Done" id="xrK-3Y-EJe">
+                                <color key="tintColor" red="0.25490197539999998" green="0.36078432199999999" blue="0.61176472900000001" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <action selector="done:" destination="-1" id="OjL-Bo-CX6"/>
                                 </connections>

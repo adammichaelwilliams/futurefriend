@@ -14,19 +14,28 @@
 
 @interface FBEViewController ()
 
+@property (strong) NSMutableArray *friends;
+
+
 @end
 
 @implementation FBEViewController
+@synthesize friends;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(dataUpdatedInContext:)
-                                                     name:NSManagedObjectContextDidSaveNotification
-                                                   object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(UpdateTableViewNotification:) name:@"UpdateTableViewNotification" object:nil];
+
+    
+
+        NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"UserDetails"];
+                
+        self.friends = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
     }
 
     return self;
@@ -41,9 +50,23 @@
     
     
   
+    NSLog(@"value:%@", friends);
+    
+  
 
     
 }
+
+
+- (void)UpdateTableViewNotification:(NSNotification *)UpdateTableViewNotification {
+    
+    [self->_tableView reloadData];
+
+    
+    
+    
+}
+
 
 
 - (IBAction)addButton:(id)sender {
@@ -56,18 +79,14 @@
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
-    
     id delegate = [[UIApplication sharedApplication] delegate];
     if ([delegate performSelector:@selector(managedObjectContext)]) {
         context = [delegate managedObjectContext];
-        
-        
     }
-    
     return context;
     
+    
 }
-
 
 
 
@@ -86,7 +105,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section   {
-    return 9;
+    return [friends count];
+    
+
     
 }
 
@@ -100,15 +121,18 @@
     if (cell == nil) {
 
         
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:myID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:myID];
         
 
     }
 
     
+//    [cell.textLabel setText:[NSString stringWithFormat:@"%@ \r%@", [tasks valueForKey:@"name"]];
+    
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@", [friends valueForKey:@"userURL"]]];
     
     
-    
+
     
     return cell;
     
@@ -127,7 +151,7 @@
 }
 
 
-
+/*
 - (void)dataUpdatedInContext:(NSNotification *)notif {
     if (![self isViewLoaded]) {
         return; // do not react if view is unloaded. It will reload itself on next load
@@ -156,6 +180,7 @@
     }
 
 }
+*/
 
 
 
