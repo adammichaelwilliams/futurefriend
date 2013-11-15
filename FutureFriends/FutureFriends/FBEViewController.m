@@ -151,7 +151,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UIWebViewController *web = [[UIWebViewController alloc] initWithNibName:@"UIWebViewController" bundle:nil];
-    web.url = friends[indexPath.item];
+    web.url = [@"https://facebook.com/" stringByAppendingString: friends[indexPath.item]];
     [self presentViewController:web animated:YES completion:nil];
     
 }
