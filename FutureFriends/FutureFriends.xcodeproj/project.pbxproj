@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C24B15C1835B85100D232C0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C24B15A1835B85100D232C0 /* Model.xcdatamodeld */; };
+		8C24B1601835B8E000D232C0 /* UIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C24B15E1835B8E000D232C0 /* UIWebViewController.m */; };
+		8C24B1611835B8E000D232C0 /* UIWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C24B15F1835B8E000D232C0 /* UIWebViewController.xib */; };
 		8C3A66281835B584009B261B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A66271835B584009B261B /* UIKit.framework */; };
 		8C3A662A1835B584009B261B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A66291835B584009B261B /* Foundation.framework */; };
 		8C3A662C1835B584009B261B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A662B1835B584009B261B /* CoreGraphics.framework */; };
@@ -21,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C24B15B1835B85100D232C0 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		8C24B15D1835B8E000D232C0 /* UIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewController.h; sourceTree = "<group>"; };
+		8C24B15E1835B8E000D232C0 /* UIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewController.m; sourceTree = "<group>"; };
+		8C24B15F1835B8E000D232C0 /* UIWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIWebViewController.xib; sourceTree = "<group>"; };
 		8C3A66241835B584009B261B /* FutureFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutureFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3A66271835B584009B261B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C3A66291835B584009B261B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +95,9 @@
 				8C3A663F1835B584009B261B /* FBEViewController.h */,
 				8C3A66401835B584009B261B /* FBEViewController.m */,
 				8C3A66421835B584009B261B /* FBEViewController.xib */,
+				8C24B15D1835B8E000D232C0 /* UIWebViewController.h */,
+				8C24B15E1835B8E000D232C0 /* UIWebViewController.m */,
+				8C24B15F1835B8E000D232C0 /* UIWebViewController.xib */,
 				8C3A662E1835B584009B261B /* Supporting Files */,
 			);
 			path = FutureFriends;
@@ -103,6 +113,7 @@
 				8C3A66391835B584009B261B /* Default.png */,
 				8C3A663B1835B584009B261B /* Default@2x.png */,
 				8C3A663D1835B584009B261B /* Default-568h@2x.png */,
+				8C24B15A1835B85100D232C0 /* Model.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C3A66321835B584009B261B /* InfoPlist.strings in Resources */,
+				8C24B1611835B8E000D232C0 /* UIWebViewController.xib in Resources */,
 				8C3A663A1835B584009B261B /* Default.png in Resources */,
 				8C3A663C1835B584009B261B /* Default@2x.png in Resources */,
 				8C3A663E1835B584009B261B /* Default-568h@2x.png in Resources */,
@@ -177,6 +189,8 @@
 				8C3A66341835B584009B261B /* main.m in Sources */,
 				8C3A66381835B584009B261B /* FBEAppDelegate.m in Sources */,
 				8C3A66411835B584009B261B /* FBEViewController.m in Sources */,
+				8C24B1601835B8E000D232C0 /* UIWebViewController.m in Sources */,
+				8C24B15C1835B85100D232C0 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +313,22 @@
 				8C3A66491835B584009B261B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C24B15A1835B85100D232C0 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C24B15B1835B85100D232C0 /* Model.xcdatamodel */,
+			);
+			currentVersion = 8C24B15B1835B85100D232C0 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8C3A661C1835B584009B261B /* Project object */;
 }

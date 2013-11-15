@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FBEViewController">
             <connections>
+                <outlet property="_tableView" destination="O9k-Go-g5M" id="psS-8c-GiA"/>
+                <outlet property="navBar" destination="cE1-fC-tEI" id="G2D-bR-4hH"/>
                 <outlet property="view" destination="6" id="7"/>
             </connections>
         </placeholder>
@@ -14,7 +16,35 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cE1-fC-tEI">
+                    <rect key="frame" x="0.0" y="26" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" red="0.27450981736183167" green="0.38431376218795776" blue="0.61960786581039429" alpha="1" colorSpace="deviceRGB"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Future Friends" id="xW0-jy-s2g">
+                            <barButtonItem key="rightBarButtonItem" systemItem="add" id="fV3-ot-iZH">
+                                <color key="tintColor" red="0.25490197539329529" green="0.36078432202339172" blue="0.61176472902297974" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <action selector="addButton:" destination="-1" id="SCb-jW-1Mj"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="O9k-Go-g5M">
+                    <rect key="frame" x="0.0" y="71" width="320" height="499"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="B3k-9h-5wj"/>
+                        <outlet property="delegate" destination="-1" id="ido-Ro-Vii"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

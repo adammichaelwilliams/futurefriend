@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FBEViewController : UIViewController {
+@interface FBEViewController : UIViewController <UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate> {
     
     
     IBOutlet UINavigationBar *navBar;
-    
+
+    IBOutlet UITableView *_tableView;
+
     
     
 }
