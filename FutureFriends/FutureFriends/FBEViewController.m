@@ -17,6 +17,20 @@
 
 @implementation FBEViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(dataUpdatedInContext:)
+                                                     name:NSManagedObjectContextDidSaveNotification
+                                                   object:nil];
+    }
+
+    return self;
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -93,6 +107,34 @@
 
 
 
+- (void)dataUpdatedInContext:(NSNotification *)notif {
+    if (![self isViewLoaded]) {
+        return; // do not react if view is unloaded. It will reload itself on next load
+    }
+
+    NSSet *inserted = [notif.userInfo objectForKey:NSInsertedObjectsKey];
+    NSSet *updated = [notif.userInfo objectForKey:NSUpdatedObjectsKey];
+    NSSet *deleted = [notif.userInfo objectForKey:NSDeletedObjectsKey];
+
+    NSMutableSet *set = [NSMutableSet setWithSet:inserted];
+    [set unionSet:updated];
+    [set unionSet:deleted];
+
+    __block BOOL needReloadData = [set count] > 0;
+//    [set enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+//        if ([obj isKindOfClass:[FXEvent class]]) {
+//            needReloadData = YES;
+//            *stop = YES;
+//        }
+//    }];
+
+//    SFLogCInfo(@"Got update notif in FXEventListController: %d", needReloadData);
+
+    if (needReloadData) {
+        [_tableView reloadData];
+    }
+
+}
 
 
 
