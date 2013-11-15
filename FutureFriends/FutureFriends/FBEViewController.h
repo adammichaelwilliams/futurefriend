@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+
 
 @interface FBEViewController : UIViewController <UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate> {
     
@@ -18,7 +20,6 @@
     
     
 }
-
 
 - (IBAction)addButton:(id)sender;
 

@@ -11,6 +11,8 @@
 		8C24B1601835B8E000D232C0 /* UIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C24B15E1835B8E000D232C0 /* UIWebViewController.m */; };
 		8C24B1611835B8E000D232C0 /* UIWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C24B15F1835B8E000D232C0 /* UIWebViewController.xib */; };
 		8C24B1631835C12000D232C0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C24B1621835C12000D232C0 /* CoreData.framework */; };
+		8C24B1671835C40600D232C0 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C24B1651835C40600D232C0 /* AddViewController.m */; };
+		8C24B1681835C40600D232C0 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C24B1661835C40600D232C0 /* AddViewController.xib */; };
 		8C3A66281835B584009B261B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A66271835B584009B261B /* UIKit.framework */; };
 		8C3A662A1835B584009B261B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A66291835B584009B261B /* Foundation.framework */; };
 		8C3A662C1835B584009B261B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A662B1835B584009B261B /* CoreGraphics.framework */; };
@@ -30,6 +32,9 @@
 		8C24B15E1835B8E000D232C0 /* UIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewController.m; sourceTree = "<group>"; };
 		8C24B15F1835B8E000D232C0 /* UIWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIWebViewController.xib; sourceTree = "<group>"; };
 		8C24B1621835C12000D232C0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8C24B1641835C40600D232C0 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		8C24B1651835C40600D232C0 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		8C24B1661835C40600D232C0 /* AddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 		8C3A66241835B584009B261B /* FutureFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutureFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3A66271835B584009B261B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8C3A66291835B584009B261B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,6 +107,9 @@
 				8C24B15D1835B8E000D232C0 /* UIWebViewController.h */,
 				8C24B15E1835B8E000D232C0 /* UIWebViewController.m */,
 				8C24B15F1835B8E000D232C0 /* UIWebViewController.xib */,
+				8C24B1641835C40600D232C0 /* AddViewController.h */,
+				8C24B1651835C40600D232C0 /* AddViewController.m */,
+				8C24B1661835C40600D232C0 /* AddViewController.xib */,
 				8C3A662E1835B584009B261B /* Supporting Files */,
 			);
 			path = FutureFriends;
@@ -179,6 +187,7 @@
 				8C3A663A1835B584009B261B /* Default.png in Resources */,
 				8C3A663C1835B584009B261B /* Default@2x.png in Resources */,
 				8C3A663E1835B584009B261B /* Default-568h@2x.png in Resources */,
+				8C24B1681835C40600D232C0 /* AddViewController.xib in Resources */,
 				8C3A66441835B584009B261B /* FBEViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +201,7 @@
 			files = (
 				8C3A66341835B584009B261B /* main.m in Sources */,
 				8C3A66381835B584009B261B /* FBEAppDelegate.m in Sources */,
+				8C24B1671835C40600D232C0 /* AddViewController.m in Sources */,
 				8C3A66411835B584009B261B /* FBEViewController.m in Sources */,
 				8C24B1601835B8E000D232C0 /* UIWebViewController.m in Sources */,
 				8C24B15C1835B85100D232C0 /* Model.xcdatamodeld in Sources */,

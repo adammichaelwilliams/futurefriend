@@ -8,6 +8,7 @@
 
 #import "FBEViewController.h"
 #import "UIWebViewController.h"
+#import "AddViewController.h"
 
 
 
@@ -17,24 +18,43 @@
 
 @implementation FBEViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+  
+
+    
 }
 
 
 - (IBAction)addButton:(id)sender {
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Add Friend" message:@"Type in the user URL" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Add", nil];
-    
-    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    [alert show];
-    
-    
+    AddViewController *add = [[AddViewController alloc] initWithNibName:@"AddViewController" bundle:nil];
+    [self presentViewController:add animated:YES completion:nil];
     
     
 }
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+        
+        
+    }
+    
+    return context;
+    
+}
+
+
 
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
